@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>HTML Lesson</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <label for="email">Email:</label>
+      <input type="email" name="email" placeholder="your email...">
+      <button>Submit</button>
+      <label for="pass">Password:</label>
+      <input type="password">
+      <div>
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name"placeholder="your first name">
+      </div>
+      
+      <div>
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" placeholder="your last name...">
+      </div>
+
+      <label for="date">Date:</label>
+      <input type="date" name="date">
+
+      <label for="telefone">Telefone Number:</label>
+      <input type="tel" name="telefone">
+
+      <label for="plan">choose a plan:</label>
+      <select name="plan" id="plan"> 
+        <option> free plan</option>
+        <optgroup label="standard plans"> 
+          <option> 10€ monthly</option>
+          <option> 50€ monthly</option>
+          <option> 100€ monthly</option>
+        </optgroup>
+      </select> 
+
+      <div>
+        <label for="pro_plan">Pro Plan: 500€ monthly</label>
+        <input type="checkbox" id="pro_plan" name="pro_plan"> 
+      </div>
+
+      <div>
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" name="cardNumber" placeholder="0000 1234 5678 9101" max="12" pattern="[0-9]+"required><br>
+        <label for="cvc">cvc:</label>
+        <input type="text" id="cvc" name="cvc" maxlength="3" size="3" pattern="[0-9]+" required><br>
+        <label for="expiration">Expiration Date</label>
+        <input type="date" id="expiration" required><br>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br>
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required><br>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required><br>
+        <label for="cap">Cap::</label>
+        <input type="text" id="cap" name="cap"required><br>
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required><br>
+        <button>Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
