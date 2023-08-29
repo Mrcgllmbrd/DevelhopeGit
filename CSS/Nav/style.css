@@ -1,0 +1,87 @@
+
+.navbar {
+    background-color: #3b3b3b;
+    display: flex;
+    width: auto;
+    padding: 10px;
+    justify-content: center;
+    
+}
+
+.link {
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    padding-right: 30px;
+    display: flex;
+    
+}
+.link a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    
+}
+
+.link1-editing a {
+    display: flex;
+    font-size: medium;
+    font-weight: 700;
+}
+
+.link2-editing a {
+    display: flex;
+    font-size: medium;
+    font-weight: 400;
+}
+
+.link3-editing a {
+    color: #dedede;
+    display: flex;
+    font-size: medium;
+
+}
+
+.link4-editing a{
+
+    color: #b9b8b8;
+    display: flex;
+    font-size: medium;
+}
+.link4-editing a::after {
+    content: "\25BE";
+}
+.submenu {
+    list-style-type: none;
+    display:none
+    
+}
+.link5-editing a {
+    color: gray;
+    display: flex;
+    font-size: medium;
+}
+
+form {
+    display: flex;
+    border-spacing: 5px;
+    padding: 5px;
+   }
+.search-bar [type="search"] {
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    border: solid green 0.5px;
+    border-radius: 5px;
+    color: green; 
+    background-color: #3b3b3b;
+
+}
+.search-bar button:hover {
+    color: white;
+    background-color: green;
+}
