@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    font-weight: bold;
+    background-color: crimson;
+    border: solid black 0.25px;
+    border-radius: 6px;
+    width: 300px;
+
+    
+    }
+
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 6px;
+}
+.content {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 10px;
+    border-bottom: 0.25px solid black;
+}
+ .borderBottom {
+    font-family:Arial, Helvetica, sans-serif;
+    border-bottom: none;
+    margin: 0px;
+    padding: 10px;
+}
+
+.link {
+    padding: 10px;
+    border-top: solid 0.5px black;
+    display: flex;
+    justify-content: space-between;
+   }
+
