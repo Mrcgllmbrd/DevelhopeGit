@@ -34,7 +34,10 @@ img {
 .link {
     padding: 10px;
     border-top: solid 0.5px black;
+          
+}
+.link2 {
     display: flex;
-    justify-content: space-between;
-   }
-
+    justify-content: center;
+    
+}
