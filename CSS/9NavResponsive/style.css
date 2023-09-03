@@ -7,7 +7,7 @@
     width: auto;
     padding: 10px;
     justify-content: center;
-    
+        
 }
 
 .logo {
@@ -98,30 +98,22 @@ form {
     background-color: green;
 }
 
-
-.panino {
-    display: block;
-    width: 25px;
-    height: 2px;
-    background-color: rgb(7, 7, 7);
-   0
-   
-  }
-  
-  
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     .navbar {
-      display: none;
-    
+    display: none;
     }
-  
-    
-    .panino:target + .navbar .link {
-      display: flex;
+
+    .panino {
+        padding-top: 10px;
+
     }
-  
-   .panino:target {
-      display: none;
+    .panino div {
+        margin: 7px auto;
+        width: 25px;
+        height: 2px;
+        background-color: rgb(7, 7, 7);
     }
+        
   }
-  
+ 
+
