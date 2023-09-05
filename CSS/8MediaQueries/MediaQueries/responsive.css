@@ -1,6 +1,6 @@
 @media (max-width: 375px) {
   .final_cards {
-    overflow-x: hidden;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,13 +9,14 @@
    
   }
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .final_cards {
-    overflow-x: hidden;
+  
     display: flex;
     flex-direction: row;
     justify-content: left;
     flex-wrap: wrap;
+   
     
     
   }
@@ -26,12 +27,12 @@
 
 @media (min-width: 769px) {
   .final_cards {
-    overflow-x: hidden;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-inline: center;
   }
-  .card_layout {
+    .card_layout:first-child, .card_layout:nth-child(2){
     margin-right: 16px;
   }
-}
+  }
