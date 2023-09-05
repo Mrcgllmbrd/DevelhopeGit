@@ -1,9 +1,9 @@
 * {
   margin: 0;
+  box-sizing: border-box;
 }
-html, body{
+html, body {
   width: 100%;
-  height: 100%;
 }
 
 :root {
@@ -53,8 +53,8 @@ html, body{
   width: 16px;
   height: 16px;
   align-self: center;
-  padding-right: 12px;
-  padding-left: 36px;
+  padding-right: 3px;
+ 
 }
 
 .cat {
@@ -73,14 +73,14 @@ html, body{
   border-radius: 50%;
 }
 
-#MarioRossi {
+.MarioRossi {
     font-family: var(--font);
     color: var(--colorname);
     font-weight:var(--fontsize);
     font-size: larger;
 }
 
-#data {
+.data {
     color: var(--data);
     
     font-family: var(--font);
