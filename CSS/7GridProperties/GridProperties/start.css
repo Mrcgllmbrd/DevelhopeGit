@@ -1,0 +1,33 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "green green green"
+    "yellow red blue"
+    "orange orange blue";
+}
+
+#yellow {
+  grid-area: yellow;
+}
+
+#green {
+  grid-area: green;
+}
+
+#orange {
+  grid-area: orange;
+}
+
+#red {
+  grid-area: red;
+}
+
+#blue {
+  grid-area: blue;
+}
+
+ul {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+}
