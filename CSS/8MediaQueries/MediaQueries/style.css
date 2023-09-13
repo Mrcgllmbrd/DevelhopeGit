@@ -1,33 +1,26 @@
 * {
-  margin: 0;
   box-sizing: border-box;
-}
-html, body {
-  width: 100%;
 }
 
 :root {
-    --namesize: larger;
-    --colorname: rgb(black);
-    --font: arial;
-    --data: rgb(255, 253, 253);
-    --datafont: bolder;
-    --colorname: black;
-    --fontsize: lighter
+  --namesize: larger;
+  --colorname: rgb(black);
+  --font: arial;
+  --data: rgb(255, 253, 253);
+  --datafont: bolder;
+  --colorname: black;
+  --fontsize: lighter;
 }
 .card_layout {
- 
-  width: 350px;
-  height: 500px;
+  width: 100%;
+  height: 100%;
   background-color: rgb(191, 191, 191);
   border-radius: 25px;
   display: flex;
   flex-wrap: wrap;
-  margin-inline: 0;
-  margin-top: auto;
   margin-bottom: 16px;
   box-shadow: 0 0 7px 0 rgb(28, 28, 28);
-  position:relative;
+  position: relative;
 }
 
 .intestazione {
@@ -38,12 +31,11 @@ html, body {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
- 
 }
 
 .data_name {
   width: 60%;
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-self: center;
@@ -54,61 +46,55 @@ html, body {
   height: 16px;
   align-self: center;
   padding-right: 3px;
- 
 }
 
 .cat {
   width: inherit;
   height: 60%;
-  position:relative;
-  bottom:5px;
-
+  position: relative;
+  bottom: 5px;
 }
 .tondino {
-
-
   width: 50px;
   height: 50px;
   background-color: white;
   border-radius: 50%;
 }
 
-.MarioRossi {
-    font-family: var(--font);
-    color: var(--colorname);
-    font-weight:var(--fontsize);
-    font-size: larger;
+.data_name h4 {
+  font-family: var(--font);
+  color: var(--colorname);
+  font-weight: var(--fontsize);
+  font-size: larger;
+  margin: 0;
+  padding-top: 16px;
 }
 
 .data {
-    color: var(--data);
-    
-    font-family: var(--font);
+  color: var(--data);
 
+  font-family: var(--font);
 }
 
 .text {
-    padding-left: 3px; 
-    font-family: var(--font);
-    display: flex;
-    font-size: 15px;
+  padding-left: 3px;
+  font-family: var(--font);
+  font-size: 15px;
 }
 
-.text >p {
-    width: 100%;
-    padding-bottom: 16px;
-    
+.text > p {
+  width: 100%;
+  padding-bottom: 16px;
+  flex-basis: 100%;
 }
 
- .text > h4 {
-    
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+.text > h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 0;
 }
 
 .like_comment {
-    position:relative;
-    bottom:10px;;
-    padding-left: 20px;
+  position: relative;
+  padding-left: 20px;
 }
-
