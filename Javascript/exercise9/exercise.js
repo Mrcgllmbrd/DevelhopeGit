@@ -4,8 +4,13 @@ const person = {
   age: 25
 }
 
-for (key in person) {
-  console.log(key, person[key]);
-}
+let keys = Object.keys(person) 
+console.log(keys) 
 
-// Print values of person using Object.keys
+let values = Object.values(person)
+console.log(values)
+
+//oppure object.entries per entrambi 
+let KeysAndValue = Object.entries(person)
+console.log(KeysAndValue)
+
