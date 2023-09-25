@@ -5,7 +5,7 @@ const person = {
   age: 25,
 };
 
-const { id: id, firstName: firstName, lastName: lastName, age: age } = person;
+const { id, firstName, lastName, age } = person;
 
 /* const id = person.id;
 const firstName = person.firstName;
