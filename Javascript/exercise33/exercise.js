@@ -1,10 +1,9 @@
-const person = {
-  id: 1,
-  firstName: 'Mario',
-  lastName: 'Rossi',
-  age: 25,
-};
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+}
 
-const json = JSON.stringify(person);
-
-console.log(json); // Should return: { id: 1, age: 25 }
+const developer = new Person("Mario", "Rossi");
+console.log(developer.firstName + " " + developer.lastName);

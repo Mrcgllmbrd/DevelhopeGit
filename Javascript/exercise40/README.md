@@ -1,7 +1,3 @@
-# Callback
+# Network Requests - Todo List
 
-Write a function called repeatHello which takes a callback as it's parameter. The callback function will simply print "Hello". The repeatHello function will have to execute the callback function with an interval of 1 second. The callback function must be an arrow function, can you also explain why?
-
-Tips:
-
-- The `setInterval` method will be useful
+Using async and await ,implement the necessary code to recover the Todos list present in the following URL through an http request: [link](https://jsonplaceholder.typicode.com/todos).

@@ -1,1 +1,1 @@
-
+const isLogged = true;

@@ -5,7 +5,12 @@ class Person {
     this.lastName = lastName;
     this.age = age;
   }
+
+  toJson() {
+    return JSON.stringify(this);
+  }
 }
 
-const developer = new Person(1, 'Mario', 'Rossi', 25);
-// Print developer as json object
+const json = '{"id":1,"firstName":"Mario","lastName":"Rossi","age":25}';
+const developer = Person.fromJson(json);
+console.log(developer);

@@ -1,7 +1,4 @@
-# Callback
+# Promise
 
-Write a function called repeatHello which takes a callback as it's parameter. The callback function will simply print "Hello". The repeatHello function will have to execute the callback function with an interval of 1 second. The callback function must be an arrow function, can you also explain why?
-
-Tips:
-
-- The `setInterval` method will be useful
+Write a `promise`. If the variable called `number` is greater than 10, then it returns a resolve, otherwise it returns a reject.
+Then manage the promise with `then` and `catch` in case of any reject.

@@ -1,3 +1,3 @@
 # JSON methods
 
-Convert the `developer` object into json.
+Create the `fromJson` method that takes in a json as parameter and returns an object of type `Person`.

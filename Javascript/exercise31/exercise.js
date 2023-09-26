@@ -1,16 +1,17 @@
-class Person {
-  constructor(id, firstName, lastName, age) {
-    this.id = id;
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
+const person1 = {
+  id: 1,
+  firstName: 'Mario',
+  lastName: 'Rossi',
+  age: 25,
+  address: {
+    state: 'Italy',
+    city: 'Rome',
+    street: 'Via Romano, 12'
   }
+};
 
-  toJson() {
-    return JSON.stringify(this);
-  }
-}
+const person2 = { ...person1 };
+person2.address.city = 'Milan';
 
-const json = '{"id":1,"firstName":"Mario","lastName":"Rossi","age":25}';
-const developer = Person.fromJson(json);
-console.log(developer);
+console.log(person1);
+console.log(person2);
