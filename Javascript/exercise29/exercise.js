@@ -7,5 +7,8 @@ class Person {
   }
 }
 
-const developer = new Person(1, 'Mario', 'Rossi', 25);
+const developer = new Person(1, "Mario", "Rossi", 25);
+let jsonObj = JSON.stringify(developer);
+console.log(jsonObj);
+
 // Print developer as json object

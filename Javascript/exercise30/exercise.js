@@ -9,7 +9,11 @@ class Person {
   toJson() {
     return JSON.stringify(this);
   }
+  static fromJson(json) {
+   return JSON.parse(json)
+  }
 }
+
 
 const json = '{"id":1,"firstName":"Mario","lastName":"Rossi","age":25}';
 const developer = Person.fromJson(json);
