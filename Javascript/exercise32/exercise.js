@@ -4,14 +4,13 @@ const person = {
   lastName: "Rossi",
   age: 25,
 };
-function toJson(obj) {
+/* function toJson(obj) {
   const jsonObj = {
   id:obj.id,
   age:obj.age
   };
   return JSON.stringify(jsonObj)
-} 
+}  */
 
-const json = person;
-
-console.log(toJson(json)); // Should return: { id: 1, age: 25 }
+const json = JSON.stringify(person, ["id","age"])
+console.log(json); // Should return: { id: 1, age: 25 }
