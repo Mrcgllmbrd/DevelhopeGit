@@ -3,12 +3,10 @@ const isLogged = true;
 function firstPromise() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (isLogged) {
-        let randomNum = Math.random();
-        resolve(randomNum);
-      } else {
-        reject(new Error(`Error in the firstPromise`));
-      }
+      isLogged
+        ? resolve(Math.random())
+        : reject(new Error(`Error in the firstPromise`));
+      reject(new Error(`Error in the firstPromise`));
     }, 1000);
   });
 }

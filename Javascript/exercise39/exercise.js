@@ -18,7 +18,7 @@ function firstPromise() {
 function secondPromise(randomNum) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (randomNum > 0.5) {
+      if (randomNum > 0.9) {
         resolve({ name: "John", age: 24 });
       } else {
        const error = new Error("Error in the secondPromise!") // personalizziamo l'errore creando un oggetto
