@@ -10,17 +10,17 @@ function saveToLocalStorage(userObject) {
 
 function recoverFromLocalStorage() {
   const userJson = localStorage.getItem("user");
- /*  try {
-    if (userJson) { */
+  try {
+    if (userJson) {
       const user = JSON.parse(userJson);
       return user;
     }
-  /* } catch (error) {
+  } catch (error) {
     console.error("syntax error", error);
   }
   return null
 }
- */
+
 saveToLocalStorage(user);
 const recoverUser = recoverFromLocalStorage();
 console.log(recoverUser);
