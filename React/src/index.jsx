@@ -1,4 +1,4 @@
-import { MyExercises } from "./MyExercises";
+import { App } from "./App";
 import { createRoot } from "react-dom/client";
 
-createRoot(document.getElementById("root")).render(<MyExercises />);
+createRoot(document.getElementById("root")).render(<App />);
