@@ -4,7 +4,7 @@ export function App() {
   return ( 
       <div> 
     <h1> the count is</h1>
-    <Counter initialValue = {100}/>
+    <Counter initialValue = {0} decrementAmount={5} resetAmount={0}/>
   </div>
   )
 
