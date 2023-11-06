@@ -1,8 +1,10 @@
-export function Welcome({ name, age }) {
+import { Age } from "./Age";
+
+export function Welcome({ name }) {
   return (
     <div>
       <p> Welcome <strong>{name}</strong> ! </p>
-      <p> <strong> </strong>Your ages is {age} </p>
+      <Age age= {32} />
     </div>
   );
 }
