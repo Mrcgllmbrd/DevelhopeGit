@@ -1,7 +1,9 @@
-export function Welcome({ name, age }) {
+
+
+export function Welcome({ myName, age }) {
   return (
     <div>
-      <p> Welcome <strong>{name}</strong> ! </p>
+      <p> Welcome {myName} ! </p>
       <p> Your ages is {age} </p>
     </div>
   );
