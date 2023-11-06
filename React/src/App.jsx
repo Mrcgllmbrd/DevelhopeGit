@@ -1,11 +1,12 @@
-import { Clock } from "./Clock";
-import { MouseClicker } from "./MouseClicker";
+
+import { InteractiveWelcome } from "./InteractiveWelcome";
+
+
 
 export function App() {
   return (
     <div>
-      <Clock />
-      <MouseClicker />
+     <InteractiveWelcome />
     </div>
   );
 }
