@@ -1,6 +1,8 @@
-export function Welcome({ name }) {
-/*  sì, potremmo settare un valore predefinito nella prop di Welcome. 
-Quindi: 
-export function Welcome({ name = "Marco" }) */
-  return <p> Welcome {name} ! </p>;
+export function Welcome({ name, age }) {
+  return (
+    <div>
+      <p> Welcome <strong>{name}</strong> ! </p>
+      <p> <strong> </strong>Your ages is {age} </p>
+    </div>
+  );
 }
