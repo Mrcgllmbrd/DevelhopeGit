@@ -1,10 +1,14 @@
-import { Welcome } from "./Welcome";
+import { AlertClock } from "./AlertClock";
 
 export function App() {
+  const HandlerTime = () => {
+    const time = new Date();
+    alert(`current time is ${time.toLocaleTimeString()}`);
+  };
+
   return (
     <div>
-      <Welcome name="Marco" age={32} />
+      <AlertClock onButtonClick={HandlerTime} />
     </div>
   );
 }
-
