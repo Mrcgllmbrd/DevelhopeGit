@@ -8,6 +8,7 @@ export function Login({ onLogin }) {
   });
 
   function handlerInputChange(evt) {
+    evt.preventDefault() 
     const name = evt.target.name;
     const value =
       evt.target.type === "text" ? evt.target.value : evt.target.checked;
@@ -26,18 +27,15 @@ export function Login({ onLogin }) {
   }
 
   function handleReset() {
-      setData ({
-        username: "",
-        password: "",
-        session: false,
+    setData({
+      username: "",
+      password: "",
+      session: false,
     });
-
   }
 
-
-
   return (
-    <div>
+    <form onSubmit={handlerInputChange}>
       <label> User </label>
       <input
         name="username"
@@ -60,15 +58,17 @@ export function Login({ onLogin }) {
         onChange={handlerInputChange}
       />
 
-      <button disabled={!data.username || !data.password}
-       onClick={handleBtn}>
+      <button disabled={!data.username || !data.password} onClick={handleBtn}>
         Login
       </button>
 
       <button onClick={handleReset}> Reset </button>
-    </div>
+    </form>
   );
 }
 
-/* Add a "reset" button to the Login component
- that clears the content of all three inputs when clicked. */
+/*Use the form element to handle the form's submission,
+ and attach the handleLogin event handler to the onSubmit event of the form element.
+ How do you prevent the default behavior of the form element?*/
+
+ //RISPOSTA: usando il metodo preventDefault()
