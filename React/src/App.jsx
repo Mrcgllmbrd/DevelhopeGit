@@ -1,15 +1,11 @@
 
-import { Login } from "./Login";
-
-function onLogin(username) {
-  console.log(`utente loggato: ${username}`)
-}
+import { UncontrolledLogin } from "./UncontrolledLogin";
 
 
 export function App() {
   return (
     <div>
-     <Login onLogin={onLogin}/>
+     <UncontrolledLogin />
     </div>
   );
 }
