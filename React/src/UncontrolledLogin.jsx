@@ -2,14 +2,13 @@ export function UncontrolledLogin() {
   
   function handleSubmit(evt) {
     evt.preventDefault();
-    const username = evt.target.elements.namedItem("username").value;
-    const password = evt.target.elements.namedItem("password").value;
-    const session = evt.target.elements.namedItem("session").checked;
+  
+    const formData = new FormData(evt.target);
 
     const data = {
-      username,
-      password,
-      session
+      username: formData.get("username"),
+      password: formData.get("password"),
+      session: formData.get("session") === "on" ? true : false,
     };
     console.log(data)
   }
@@ -31,8 +30,9 @@ export function UncontrolledLogin() {
   );
 }
 
-/* Implement an UncontrolledLogin component 
-that implements all the operations of the Login component,
-but does so using uncontrolled components. 
-Attempt to access the values of the form using the DOM API 
-by reading the event.target of the onSubmit event handler. */
+/* Attempt to access the values of the form by using the FormData API. 
+What are the advantages? What are the disadvantages? */
+
+// RISPOSTA: Lo svantaggio è il dover usare un operatore condizionale
+// per ottenere il false sull'input checked, il vantaggio è avere una 
+// sintassi più ordinata
