@@ -1,11 +1,18 @@
 import { useEffect, useRef } from "react";
-
  export function FocusLableInput() {
 
-  const inpRef =  useRef(null)
+  const mountRef = useRef(false)
+ 
 
   useEffect(() => {
-    inpRef.current?.focus()
+ if(!mountRef.current) {
+    mountRef.current = true
+    console.log(`component mounted for the first time`)
+  } else {
+    console.log(`component mounted again`)
+  }
+
+
   }, [])
  
   function handleSubmit(evt) {
@@ -18,14 +25,13 @@ import { useEffect, useRef } from "react";
       session: formData.get("session") === "on" ? true : false,
     };
     console.log(data)
-    console.log(inpRef);
   }
     
 
   return (
     <form onSubmit={handleSubmit}>
       <label> User </label>
-      <input ref={inpRef} name="username" />
+      <input name="username" />
 
       <label> Pass </label>
       <input name="password" type="password" />
@@ -39,5 +45,6 @@ import { useEffect, useRef } from "react";
   );
 }
 
-/* Create a FocusableInput component that renders an input tag.
- As soon as the component renders, the input tag should be focused automatically. */
+/* Using StrictMode, create a component with an effect
+that prints a message only when the component is mounted the first time. 
+Use a ref to keep track of whether the component is mounted or not. */
