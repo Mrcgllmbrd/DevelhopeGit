@@ -1,13 +1,11 @@
-
-import { UncontrolledLogin } from "./UncontrolledLogin";
+import {FocusLableInput} from "./focusLableInput";
 
 
 export function App() {
   return (
     <div>
-     <UncontrolledLogin />
+     <FocusLableInput />
     </div>
   );
 }
-
 

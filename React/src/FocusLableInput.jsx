@@ -1,8 +1,15 @@
-export function UncontrolledLogin() {
-  
+import { useEffect, useRef } from "react";
+
+ export function FocusLableInput() {
+
+  const inpRef =  useRef(null)
+
+  useEffect(() => {
+    inpRef.current?.focus()
+  }, [])
+ 
   function handleSubmit(evt) {
-    evt.preventDefault();
-  
+  evt.preventDefault()
     const formData = new FormData(evt.target);
 
     const data = {
@@ -11,12 +18,14 @@ export function UncontrolledLogin() {
       session: formData.get("session") === "on" ? true : false,
     };
     console.log(data)
+    console.log(inpRef);
   }
+    
 
   return (
     <form onSubmit={handleSubmit}>
       <label> User </label>
-      <input name="username" />
+      <input ref={inpRef} name="username" />
 
       <label> Pass </label>
       <input name="password" type="password" />
@@ -30,9 +39,5 @@ export function UncontrolledLogin() {
   );
 }
 
-/* Attempt to access the values of the form by using the FormData API. 
-What are the advantages? What are the disadvantages? */
-
-// RISPOSTA: Lo svantaggio è il dover usare un operatore condizionale
-// per ottenere il false sull'input checked, il vantaggio è avere una 
-// sintassi più ordinata
+/* Create a FocusableInput component that renders an input tag.
+ As soon as the component renders, the input tag should be focused automatically. */
