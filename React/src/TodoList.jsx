@@ -20,19 +20,28 @@ export function TodoList() {
     setTodos([])
   }
 
+  function handleRemoveItem(index) {
+    const deleteTodo = todos.filter((_, i) => i !== index)
+    setTodos(deleteTodo)
+    console.log(deleteTodo)
+    }
+  
   return (
     <div>
-      <form >
+      <form>
         <input value={todo} onChange={handleInpChange} />
-      <button onClick={handleTodoAdd} disabled={!todo}>
-        add Todo
-      </button>
-      <button onClick={handleResetBtn}>Reset</button>
+        <button onClick={handleTodoAdd} disabled={!todo}>
+          add Todo
+        </button>
+        <button onClick={handleResetBtn}>Reset</button>
       </form>
-      
+
       <ul>
         {todos.map((myTodo, index) => (
-          <li key={index}>{myTodo}</li>
+          <li key={index}>
+            {myTodo}
+            <button onClick={() => handleRemoveItem(index)} > remove </button>
+          </li>
         ))}
       </ul>
     </div>
@@ -40,7 +49,6 @@ export function TodoList() {
 }
 
 /* 
-Modify the TodoList component so that the input clears every time a Todo is added to the todos array.
-Add a "reset" button that clears the todos array when clicked.
- */
+Modify the TodoList by adding a "remove" button to each li tag.
+When clicked, the event handler should remove corresponding item from the todos array. */
  
