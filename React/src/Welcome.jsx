@@ -1,14 +1,16 @@
-export function Welcome({ name, age }) {
+import { Age } from "./Age";
+
+export function Welcome({name, age}) {
   return (
     <div>
       <p>
         Welcome <strong>{name}</strong> !
       </p>
-      {age > 18 && <p> Your ages is {age} </p>}
-      {age && <p> Your ages is {age} </p>}
-      {age < 65 && age > 18 && <p>Your ages is {age} </p>}
-      {age > 18 && name === "John" && <p> Your ages is {age} </p>}
-      {<p> Your ages is {age} </p>}
+      {age > 18 && <Age age={age} /> }
+      {age && <Age age={age} />}
+      {age < 65 && age > 18 && <Age age={age} /> }
+      {age > 18 && name === "John" &&  <Age age={age} />}
+      <Age age={age} />
     </div>
   );
 }
