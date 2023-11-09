@@ -13,23 +13,34 @@ export function TodoList() {
   setTodos((prevTodos) => [...prevTodos, todo]);
   setTodo('')
   console.log(todo)
+  }
 
+  function handleResetBtn(evt) {
+    evt.preventDefault()
+    setTodos([])
   }
 
   return (
-    <ul>
-      <input value={todo} onChange={handleInpChange} />
-      <button onClick={handleTodoAdd} disabled={!todo} > add Todo</button>
-      {todos.map((myTodo, index) => (
-       <li key={index} >{myTodo}</li> 
+    <div>
+      <form >
+        <input value={todo} onChange={handleInpChange} />
+      <button onClick={handleTodoAdd} disabled={!todo}>
+        add Todo
+      </button>
+      <button onClick={handleResetBtn}>Reset</button>
+      </form>
+      
+      <ul>
+        {todos.map((myTodo, index) => (
+          <li key={index}>{myTodo}</li>
         ))}
-    </ul>
+      </ul>
+    </div>
   );
 }
 
-/* Create a TodoList component that renders a ul tag with a li tag for each item contained in the todos state variable. 
-The todos state variable should be an array of strings. 
-The TodoList component should also contain an input tag and a button. 
-When the button is clicked, the event handler should add the value of the input tag to the todos array.
+/* 
+Modify the TodoList component so that the input clears every time a Todo is added to the todos array.
+Add a "reset" button that clears the todos array when clicked.
  */
  
