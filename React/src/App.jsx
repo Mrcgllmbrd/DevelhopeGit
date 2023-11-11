@@ -1,10 +1,11 @@
 
-import { Welcome } from "./Welcome";
+import { Clock } from "./Clock";
+
 
 export function App() {
   return (
     <div>
-      <Welcome name="Walter"
+     <Clock
   
       />
     </div>
