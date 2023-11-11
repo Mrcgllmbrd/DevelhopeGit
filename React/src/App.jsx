@@ -1,10 +1,12 @@
-import { Welcome } from "./Welcome";
+
+import { TodoList } from "./TodoList";
 
 export function App() {
   return (
     <div>
-      <Welcome name="Marco" age={32} />
+      <TodoList
+  
+      />
     </div>
   );
 }
-
