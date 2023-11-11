@@ -1,11 +1,11 @@
 
-import { Clock } from "./Clock";
+import { TodoList } from "./TodoList";
 
 
 export function App() {
   return (
     <div>
-     <Clock
+     <TodoList
   
       />
     </div>
