@@ -1,4 +1,4 @@
-.form {
+.container {
   background-color: rgba(4, 29, 46, 0.893);
   width: 90%;
   height: 100vh;
@@ -6,11 +6,13 @@
   margin-inline: auto;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   padding: 1rem 0 0 1rem;
   box-sizing: border-box;
   
 }
+
+
 
 .btn {
   background-color: rgb(157, 216, 216);
@@ -22,10 +24,13 @@
 .inpt {
 outline: none;
 margin-bottom: 0.5rem;
-padding-right: 10px;
 
 }
 
+.list {
+  padding: 1rem;
+  align-self: center;
+}
 
 .list li {
   list-style:decimal;

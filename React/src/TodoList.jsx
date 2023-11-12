@@ -22,26 +22,32 @@ export function TodoList() {
   }
 
   return (
-    <div className={classes.form}>
-      <form>
-        <input className={classes.inpt} value={todo} onChange={handleInpChange} />
-        <button
-          className={classes.btn}
-          onClick={handleTodoAdd}
-          disabled={!todo}
-        >
-          add Todo
-        </button>
-        <button className={classes.btn} onClick={handleResetBtn}>
-          Reset
-        </button>
-      </form>
+    <div className={classes.container}>
+      <div className={classes.form}>
+        <form>
+          <input
+            className={classes.inpt}
+            value={todo}
+            onChange={handleInpChange}
+          />
+          <button
+            className={classes.btn}
+            onClick={handleTodoAdd}
+            disabled={!todo}
+          >
+            add Todo
+          </button>
+          <button className={classes.btn} onClick={handleResetBtn}>
+            Reset
+          </button>
+        </form>
 
-      <ul className={classes.list}>
-        {todos.map((myTodo, index) => (
-          <li key={index}>{myTodo}</li>
-        ))}
-      </ul>
+        <ul className={classes.list}>
+          {todos.map((myTodo, index) => (
+            <li key={index}>{myTodo}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
