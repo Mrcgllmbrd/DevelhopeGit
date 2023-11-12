@@ -1,21 +1,37 @@
-import { Container } from "./Container";
-import { ContainerVariante } from "./ContainerVariante";
-import { TodoList } from "./TodoList";
+
+import { useState } from "react";
+import { Clock } from "./Clock";
+import { LanguageContext } from "./LanguageContext";
+
 
 export function App() {
-  return (
-    <div>
-      {" "}
-      <Container title={<h1> Hey You!</h1>}>
-        <h2>Welcome to my app</h2>
-        <h3>enjoy your list</h3>
-        <TodoList />
-      </Container>
-      <ContainerVariante title={<h1> Hey You!</h1>}>
-        <h2>Welcome to my app</h2>
-        <h3>enjoy your list</h3>
-        <TodoList />
-      </ContainerVariante>
-    </div>
-  );
+ const [language, setLanguage] = useState('en')
+
+ function handleLanguage(language) {
+    console.log(`Changing language to: ${language}`);
+
+  setLanguage(language)
+ }
+
+
+
+return (
+  <div>
+    <LanguageContext.Provider value={language}>
+      <Clock />
+      <select id="lang" onChange={(evt) => handleLanguage(evt.target.value)}>
+        <option value='en'>Inglese</option>
+        <option value='it'>Italiano</option>
+      </select>
+    </LanguageContext.Provider>
+  </div>
+);
 }
+
+/* 
+Create a LanguageContext and wrap the Clock component within its provider.
+Add a select tag to the component in which the Clock component 
+is rendered that allows the user to select the language,
+ and pass it as a value to the Provider.
+Consume the LanguageContext within the Clock component by using the useContext hook,
+ and show the "current time" message in the correct language. */
