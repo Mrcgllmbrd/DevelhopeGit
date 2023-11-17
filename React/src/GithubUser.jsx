@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 
-export function GithubUser({ username }) {
-  const [data, setData] = useState(null);
+
+export function GithubUser({username}) {
+  const [data, setData] = useState(null)
+
 
   useEffect(() => {
     try {
@@ -18,13 +20,13 @@ export function GithubUser({ username }) {
 
   return (
     <div>
-      {data && <h1>{data.name}</h1>}
-      {data && <h1>{data.login}</h1>}
-      {data && <h1>{data.url}</h1>}
+      <h3> {data && data.login} </h3>
     </div>
   );
 }
 
-/* Create a GithubUser component that receives a username prop
-and fetches the data of the corresponding Github user from the Github API.
-The component should render the user's name, login and avatar. */
+/* Starting from the previous exercise, create a new GithubUsers component 
+that has a form with a text input and a submit button.
+The input will be used for searching a user by providing their username.
+Each user will be displayed in a list, where each list item is a GithubUser component.
+These components will take username as a prop. */
