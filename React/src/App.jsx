@@ -1,9 +1,9 @@
-import { GithubUsers } from "./GithubUsers";
+import { HookCounter } from "./HookCounter";
 
 export function App() {
   return (
     <div>
-      <GithubUsers />
+     <HookCounter />
     </div>
   );
 }
