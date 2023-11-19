@@ -23,7 +23,7 @@ export function GithubUsers() {
       <ul>
         {usernames.map((username, index) => (
           <li key={index}>
-            <GithubUser username={username} />
+            <GithubUser username={username}  />
           </li>
         ))}
       </ul>

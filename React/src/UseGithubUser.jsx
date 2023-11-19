@@ -2,28 +2,42 @@ import { useEffect, useState } from "react";
 
 export function UseGithubUser({ username }) {
   const [data, setData] = useState(null);
- 
-  useEffect(() => {
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(null);
+
+  async function fetchData() {
+    setLoading(true);
+
     try {
-      fetch(`https://api.github.com/users/${username}`)
-        .then((res) => res.json())
-        .then((json) => {
-          console.log(json);
-          return setData(json);
-        });
+      const res = await fetch(`https://api.github.com/users/${username}`);
+      const json = await res.json();
+      if(json !== 200) {
+        setError (new Error ('user non found'))
+      }
+      setData(json);
+
     } catch (error) {
-      console.log(error);
+      setError(error);
+      setData(null)
+
+    } finally {
+      setLoading(false);
     }
+  }
+
+  useEffect(() => {
+    fetchData(username);
   }, [username]);
 
   return {
-   data
-  
-  }
-  
+    data,
+    error,
+    loading,
+  };
 }
 
-/* Extract the logic to fetch a Github user's data 
-from the GithubUser component from the third exercise
-of Context into a custom hook 
-called useGithubUser. */
+/* 
+Modify the useGithubUser hook to return the function 
+to fetch the data of a Github user,
+along with the data of the user and the error and loading states.
+*/
