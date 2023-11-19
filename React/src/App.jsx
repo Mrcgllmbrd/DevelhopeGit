@@ -1,10 +1,9 @@
-
-import { Login } from "./Login";
+import { Counter } from "./Counter";
 
 export function App() {
   return (
     <div>
-     <Login />
+      <Counter />
     </div>
   );
 }
