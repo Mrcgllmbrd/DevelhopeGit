@@ -1,10 +1,13 @@
-import { Welcome } from "./Welcome";
-
+import { Route, Routes } from "react-router-dom";
+import { Welcome } from "./Welcome"
 
 export function App() {
   return (
     <div>
-      <Welcome name = "Marco"/> {/* Se non passiamo la prop, nessun nome verrà renderizzato.  */}
+      <Routes>
+        <Route path="/" element={<Welcome name="marco" />} />
+      </Routes>
+
     </div>
-  )
+  );
 }
