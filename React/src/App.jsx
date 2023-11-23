@@ -1,16 +1,18 @@
-import { Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Counter } from "./Counter";
 
 export function App() {
   return (
     <div>
       <h1> the count is</h1>
-      <Routes>
-        <Route
-          path="/"
-          element={<Counter initialValue={100} incrementAmount={5} />}
-        />
-      </Routes>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={<Counter initialValue={100} incrementAmount={5} />}
+          />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
