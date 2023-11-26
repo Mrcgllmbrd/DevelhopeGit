@@ -23,7 +23,7 @@ export function GithubUserList() {
         {data &&
           data.map((user) => (
             <li key={user.login}>
-              <Link to={`/users/${user.login}`}>{user.login}</Link>
+              <Link to={`/users/${user.login}` }>{user.login}</Link>
             </li>
           ))}
       </ul>
