@@ -9,8 +9,9 @@ export function App() {
         <h1>my awesome App</h1>
 
         <Routes>
-          <Route path="/users" element={<GithubUserList />} />
-          <Route path="/users/:username" element={<ShowGithubUser />} />
+          <Route path="/" element={<GithubUserList />}>
+              <Route path=":username" element={<ShowGithubUser />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>
