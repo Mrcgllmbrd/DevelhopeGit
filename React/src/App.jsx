@@ -18,11 +18,14 @@ export function App() {
               </div>
             }
           />
-          <Route path="/users" element={<GithubUserList />} >
-           <Route path=":username" element={<ShowGithubUser />} />
+          <Route path="/users" element={<GithubUserList />}>
+            <Route path=":username" element={<ShowGithubUser />} />
           </Route>
+          <Route index element={<p> add a user and select it </p>} />
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
+
+/* Add an index route to the GithubUserList route that shows the "Add a user and select it" message. */
