@@ -1,14 +1,17 @@
 export function MouseClicker() {
   function handleButtonClick(evt) {
     console.log(evt.target.name)
-    console.log(evt.target.src); // usando target e cliccando sull'immagine attivo solo l'attributo del nodo cliccato, quindi src di img.
   }
 
+  function handleClickImg(evt) {
+    console.log(evt.target.src); // usando target e cliccando sull'immagine attivo solo l'attributo del nodo cliccato, quindi src di img.
+
+  }
   return (
     <button name="One" onClick={handleButtonClick}>
       {" "}
       Click me
-      <img
+      <img onClick={handleClickImg}
         src="https://fastly.picsum.photos/id/122/200/200.jpg?hmac=AO77fWXJ61xiBlRhsCVFnWdzhJoxbrUP8288wd3Wdmg"
         alt=""
         width={30}
