@@ -3,7 +3,7 @@ import { UseGithubUser } from "./UseGithubUser";
 
 export function GithubUser({ username }) {
   
- const {data, error} = UseGithubUser({username})
+ const {data, error} = UseGithubUser(username)
 
   return (
     <div>

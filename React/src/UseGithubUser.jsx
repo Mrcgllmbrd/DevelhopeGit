@@ -1,15 +1,10 @@
 import useSWR from "swr";
 
-const fetcher = (url) =>
-  fetch(url)
-    .then((response) => response.json())
-    .then((error) => console.log(error));
 
-export function UseGithubUser({ username }) {
+
+export function UseGithubUser(username) {
   const { data, error, mutate } = useSWR(
-    `https://api.github.com/users/${username}`,
-    fetcher
-  );
+    `https://api.github.com/users/${username}`);
   if (username === null) {
     return {
       data: null,
@@ -29,6 +24,7 @@ export function UseGithubUser({ username }) {
 }
 
 /*
-Modify the useGithubUser hook so that it returns
-a function to manually refetch the data when invoked.
+Use SWRConfig to set a default value
+for the fetcher prop of the useSWR hook.
+
 */
