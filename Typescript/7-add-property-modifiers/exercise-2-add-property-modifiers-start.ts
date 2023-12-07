@@ -8,7 +8,7 @@
 interface Country {
     name: string;
     code: string;
-    population: number;
+    population?: number;
 }
 
 const countryA: Country = {
@@ -32,7 +32,7 @@ const countryC: Country = {
 // This will cause a type error. Remove the code that now has a type error.
 
 type Currency = {
-    name: string;
+   readonly name: string;
     code: string;
     symbol: string;
 };
@@ -42,8 +42,6 @@ const currencyData: Currency = {
     code: "EUR",
     symbol: "€",
 };
-
-currencyData.name = "Gold";
 
 currencyData.code = "GGG";
 
