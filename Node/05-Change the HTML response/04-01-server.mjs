@@ -8,10 +8,16 @@ const server = createServer((request, response) => {
   response.setHeader("Content-Type", "text/html");
 
   response.end(
-    "<html><body><h1>This page was served with Node.js!</h1></body></html>"
+    "<html><body><h1>il mio server</h1></body></html>"
   );
 });
 
 server.listen(3000, () => {
   console.log(`Server running at http://localhost:3000`);
 });
+
+/* 
+Our HTTP server sends an HTML response body.
+Replace the text in the HTML with your own message.
+Run the server and use your web browser to test your changes. 
+*/
