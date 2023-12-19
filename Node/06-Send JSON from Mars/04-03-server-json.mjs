@@ -23,5 +23,4 @@ Run the server and make a request to it with
 curl using the --verbose flag.
 What is the value of the Content-Length response header? 
 */
-
 // il valore è 19.
