@@ -1,11 +1,10 @@
 import express from "express";
 import morgan from "morgan"
 import "express-async-errors"
-import dotenv from "dotenv";
-dotenv.config();
+import "dotenv/config";
 
-const app = express();
 const port = process.env.PORT;
+const app = express();
 app.use(morgan('dev'))
 app.use(express.json());
 
