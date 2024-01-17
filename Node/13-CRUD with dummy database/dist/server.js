@@ -45,7 +45,7 @@ app.delete("/planets/:id", (req, res) => {
 app.put("/planets/:id", (req, res) => {
     const { id } = req.params;
     const { name } = req.body;
-    planets = planets.map(p => p.id === Number(id) ? Object.assign(Object.assign({}, p), { name }) : p);
+    planets = planets.map((p) => (p.id === Number(id) ? Object.assign(Object.assign({}, p), { name }) : p));
     console.log(planets);
     res.status(200).json({ msg: "planet updated " });
 });

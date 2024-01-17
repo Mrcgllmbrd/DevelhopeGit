@@ -5,7 +5,7 @@
 // Add type annotations to each of these variables.
 
 let country = "Italy";
-// ^ country 
+// ^ string 
 
 let year = undefined;
 // ^ undefined

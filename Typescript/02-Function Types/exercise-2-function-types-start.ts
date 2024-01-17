@@ -4,7 +4,7 @@
 
 // Add types to this function declaration.
 
-function doubleThePopulation(value: number): number {
+function doubleThePopulation(value: number) {
     return value * 2;
 }
 
